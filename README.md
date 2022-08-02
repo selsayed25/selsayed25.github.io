@@ -3,7 +3,7 @@
 You can find all of the code and respositories for this website here!
 
 
-
+### NOT MAINTAINED AFTER AUGUST 1, 2022. CHECK OUT THE NEWER WEBSITE HERE: 
 
 
 
