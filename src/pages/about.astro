@@ -1,0 +1,299 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About - Sami Elsayed">
+	<div class="about-hero">
+		<div class="hero-image">
+			<img src="/public/img/sami-elsayed.jpg" alt="Cybersecurity workspace" />
+		</div>
+		<div class="hero-text">
+			<h1 class="page-title">About Me</h1>
+			<p class="page-subtitle">My journey from a high school system administrator to cyber engineer</p>
+		</div>
+	</div>
+
+	<section class="about-content">
+		<div class="content-section">
+			<h2 class="section-title">Background</h2>
+			<div class="section-content">
+				<div class="section-text">
+					<p>
+						I graduated from Thomas Jefferson High School for Science and Technology (TJHSST), where I served as a student system administrator and led critical reimaging and modernization efforts after COVID shutdowns slowed infrastructure upgrades to a halt. During that time, I developed a serious respect for systems — how they break, how they survive, and how they can be redesigned to serve people more effectively.
+					</p>
+				</div>
+				<div class="section-image">
+					<img src="/public/img/sami-elsayed-tjcsl.jpg" alt="Network infrastructure" />
+				</div>
+			</div>
+		</div>
+
+		<div class="content-section">
+			<h2 class="section-title">Current Focus</h2>
+			<div class="section-content reverse">
+				<div class="section-text">
+					<p>
+						Now I'm planning on pursuing a degree in Cyber Security Engineering at George Mason University, a well-known and respected institution located in the heart of Fairfax, Virginia. My focus is on building knowledge of binary exploitation, network security, and infrastructure hardening. I believe that understanding the technical underpinnings of systems is essential for creating effective policy and ensuring public trust in technology.
+					</p>
+				</div>
+				<div class="section-image">
+					<img src="/public/img/gmu-campus-1.jpg" alt="University campus" />
+				</div>
+			</div>
+		</div>
+
+		<div class="content-section">
+			<h2 class="section-title">Published Work</h2>
+			<div class="section-content">
+				<div class="section-text">
+					<p>
+						I've published onto the web two "web-books." <em>The Techbook</em>, a beginner's guide to programming and computing systems, and <em>Unraveling AI Paradoxes</em>, a book about the future of artificial intelligence and the risks we're not ready for. These projects reflect my belief that complex technical concepts should be accessible to everyone.
+					</p>
+				</div>
+				<div class="section-image">
+					<img src="/public/img/ai-paradoxes.png" alt="Books and technology" />
+				</div>
+			</div>
+		</div>
+
+		<div class="content-section">
+			<h2 class="section-title">Future Goals</h2>
+			<div class="section-content reverse">
+				<div class="section-text">
+					<p>
+						Looking ahead, I'm interested in both engineering and public service — possibly law school, possibly Congress. But before that, I want to do the work, not just talk about it. I believe that understanding how systems work at a technical level is essential for creating effective policy that serves the public interest.
+					</p>
+				</div>
+				<div class="section-image">
+					<img src="https://images.unsplash.com/flagged/photo-1579274216947-86eaa4b00475?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGF0YSUyMGNlbnRlcnxlbnwwfHwwfHx8MA%3D%3D" alt="Government building" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="skills">
+		<h2 class="section-title">Areas of Interest</h2>
+		<div class="skills-grid">
+			<div class="skill-card">
+				<h3>Cybersecurity</h3>
+				<p>Network security, infrastructure hardening, and system administration</p>
+			</div>
+			<div class="skill-card">
+				<h3>Policy & Debate</h3>
+				<p>Labor law, technology policy, and public trust in institutions</p>
+			</div>
+			<div class="skill-card">
+				<h3>Systems Engineering</h3>
+				<p>Distributed systems, network protocols, and scalable infrastructure</p>
+			</div>
+			<div class="skill-card">
+				<h3>AI & Ethics</h3>
+				<p>Machine learning safety, AI governance, and algorithmic accountability</p>
+			</div>
+			<div class="skill-card">
+				<h3>Computer Science</h3>
+				<p>Programming languages, data structures, and algorithms</p>
+			</div>
+			<div class="skill-card">
+				<h3>Engineering</h3>
+				<p>Systems design, prototyping, and project management</p>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.about-hero {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		padding: 3rem 0;
+		border-bottom: 1px solid var(--border-color);
+		margin-bottom: 3rem;
+		align-items: center;
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.hero-image {
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.hero-image:hover img {
+		transform: scale(1.05);
+	}
+
+	.page-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.25rem;
+		color: var(--text-secondary);
+		font-weight: 500;
+		line-height: 1.6;
+	}
+
+	.about-content {
+		max-width: 1000px;
+		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.content-section {
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 1.75rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.section-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.section-content.reverse {
+		grid-template-columns: 1fr 2fr;
+	}
+
+	.section-content.reverse .section-text {
+		order: 2;
+	}
+
+	.section-content.reverse .section-image {
+		order: 1;
+	}
+
+	.section-text p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: var(--text-primary);
+	}
+
+	.section-image {
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: var(--shadow);
+	}
+
+	.section-image img {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.section-image:hover img {
+		transform: scale(1.05);
+	}
+
+	.skills {
+		margin-top: 4rem;
+		padding-top: 3rem;
+		border-top: 1px solid var(--border-color);
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+		padding: 1rem;
+	}
+
+	.skill-card {
+		background-color: var(--bg-secondary);
+		padding: 1.5rem;
+		border-radius: 12px;
+		border: 1px solid var(--border-color);
+		transition: allmargin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem; 0.2s ease;
+	}
+
+	.skill-card:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--accent-color);
+	}
+
+	.skill-card h3 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		margin-bottom: 0.5rem;
+	}
+
+	.skill-card p {
+		color: var(--text-secondary);
+		line-height: 1.6;
+	}
+
+	@media (max-width: 768px) {
+		.about-hero {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.hero-image img {
+			height: 300px;
+		}
+
+		.page-title {
+			font-size: 2rem;
+		}
+
+		.page-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.section-content,
+		.section-content.reverse {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.section-content.reverse .section-text,
+		.section-content.reverse .section-image {
+			order: unset;
+		}
+
+		.skills-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.section-text p {
+			font-size: 1rem;
+		}
+	}
+</style>

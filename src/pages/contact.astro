@@ -1,0 +1,296 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact - Sami Elsayed">
+	<div class="contact-hero">
+		<div class="hero-content">
+			<h1 class="page-title">Contact</h1>
+			<p class="page-subtitle">Let's discuss cybersecurity, policy, and building better systems</p>
+		</div>
+		<div class="hero-image">
+			<img src="https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional workspace" />
+		</div>
+	</div>
+
+	<section class="contact-content">
+		<div class="contact-intro">
+			<p class="intro-text">
+				Reach out if you want to talk about cybersecurity, public policy, education reform, or anything that sits at the edge of systems and society.
+			</p>
+		</div>
+
+		<div class="contact-info">
+			<div class="contact-cards">
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="contact-details">
+						<h3>Email</h3>
+						<a href="mailto:elsayedcyber@gmail.com" class="contact-link">elsayedcyber@gmail.com</a>
+					</div>
+				</div>
+
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="contact-details">
+						<h3>GitHub</h3>
+						<a href="https://github.com/selsayed25" class="contact-link">github.com/selsayed25</a>
+					</div>
+				</div>
+
+				<div class="contact-card">
+					<div class="contact-icon">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="contact-details">
+						<h3>LinkedIn</h3>
+						<a href="https://linkedin.com/in/sami-elsayed" class="contact-link">linkedin.com/in/sami-elsayed</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="availability">
+			<h2 class="section-title">Availability</h2>
+			<div class="availability-content">
+				<div class="availability-text">
+					<p>
+						Open to internships, collaborations, and conversations. I'm particularly interested in opportunities that combine technical work with policy impact, whether that's in cybersecurity, AI governance, or infrastructure resilience.
+					</p>
+				</div>
+				<div class="availability-image">
+					<img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Collaboration workspace" />
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.contact-hero {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		padding: 3rem 0;
+		border-bottom: 1px solid var(--border-color);
+		margin-bottom: 3rem;
+		align-items: center;
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.page-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.25rem;
+		color: var(--text-secondary);
+		font-weight: 500;
+		line-height: 1.6;
+	}
+
+	.hero-image {
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.hero-image:hover img {
+		transform: scale(1.05);
+	}
+
+	.contact-content {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.contact-intro {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.intro-text {
+		font-size: 1.2rem;
+		line-height: 1.7;
+		color: var(--text-primary);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.contact-info {
+		margin-bottom: 4rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.contact-cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.contact-card {
+		background-color: var(--bg-secondary);
+		padding: 2rem;
+		border-radius: 16px;
+		border: 1px solid var(--border-color);
+		transition: all 0.3s ease;
+		text-align: center;
+	}
+
+	.contact-card:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--accent-color);
+	}
+
+	.contact-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		background-color: var(--accent-color);
+		border-radius: 50%;
+		margin-bottom: 1.5rem;
+		color: white;
+	}
+
+	.contact-details h3 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		margin-bottom: 0.5rem;
+	}
+
+	.contact-link {
+		color: var(--accent-color);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.2s ease;
+	}
+
+	.contact-link:hover {
+		color: #2563eb;
+		text-decoration: underline;
+	}
+
+	.availability {
+		background-color: var(--bg-secondary);
+		padding: 2.5rem;
+		border-radius: 16px;
+		border: 1px solid var(--border-color);
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.section-title {
+		font-size: 1.75rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.availability-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.availability-text p {
+		font-size: 1.1rem;
+		line-height: 1.7;
+		color: var(--text-primary);
+		margin: 0;
+	}
+
+	.availability-image {
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: var(--shadow);
+	}
+
+	.availability-image img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.availability-image:hover img {
+		transform: scale(1.05);
+	}
+
+	@media (max-width: 768px) {
+		.contact-hero {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.page-title {
+			font-size: 2rem;
+		}
+
+		.page-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.contact-cards {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-card {
+			padding: 1.5rem;
+		}
+
+		.intro-text {
+			font-size: 1.1rem;
+		}
+
+		.availability {
+			padding: 2rem;
+		}
+
+		.availability-content {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.availability-text p {
+			font-size: 1rem;
+		}
+	}
+</style>

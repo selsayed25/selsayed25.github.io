@@ -1,0 +1,453 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sami Elsayed - Cyber Security Engineering Student">
+	<div class="hero">
+		<div class="hero-background">
+			<div class="background-image" id="bg1"></div>
+			<div class="background-image" id="bg2"></div>
+			<div class="background-image" id="bg3"></div>
+			<div class="background-overlay"></div>
+		</div>
+		<div class="hero-content">
+			<h1 class="hero-name">
+				<span id="typed-name"></span>
+				<span class="cursor" id="name-cursor">|</span>
+			</h1>
+			<p class="hero-tagline">Cyber Security Engineering @ GMU | Policy Debater | Builder | Faithful</p>
+		</div>
+	</div>
+
+	<div class="content-container">
+		<section class="intro">
+			<div class="intro-content">
+				<div class="intro-image">
+					<img src="/public/img/sami-elsayed.jpg" alt="Technology workspace" />
+				</div>
+				<div class="intro-text-content">
+					<p class="intro-text">
+						I'm a first-year Cyber Security Engineering student at George Mason University, born and raised in Northern Virginia. My interests live at the intersection of infrastructure, policy, CS and engineering, and public trust — whether that means securing networks, learning about reinforcement learning techniques, debating how labor laws should evolve, or rebuilding what broke during the pandemic. I've worked as a system administrator at TJHSST, published open-access books on technology and artificial intelligence, and plan to use every semester to solve real problems — not just pass classes.
+					</p>
+					<a href="/about" class="read-more-btn">Read More</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="quotes">
+			<div class="quote-container">
+				<h2 class="section-title">My Favorite Quotes</h2>
+				<p class="section-subtitle">Words that inspire my journey in technology and policy</p>
+				<blockquote class="quote">
+					<span id="typed-quote"></span>
+					<span class="cursor" id="quote-cursor">|</span>
+				</blockquote>
+				<cite class="quote-author">
+					— <span id="typed-author"></span>
+					<span class="cursor" id="author-cursor">|</span>
+				</cite>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style>
+	.hero {
+		position: relative;
+		width: 100vw;
+		margin-left: calc(-50vw + 50%);
+		padding: 6rem 2rem;
+		text-align: center;
+		overflow: hidden;
+		min-height: 70vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero-background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -2;
+		filter: brightness(50%);
+	}
+
+	.background-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-size: cover;
+		background-position: center;
+		opacity: 0;
+		transition: opacity 2s ease-in-out;
+	}
+
+	#bg1 {
+		background-image: url('https://images.unsplash.com/photo-1610812388300-cd1e9cf28b54?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	}
+
+	#bg2 {
+		background-image: url('https://images.unsplash.com/photo-1635982567485-6df7421c1696?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	}
+
+	#bg3 {
+		background-image: url('https://images.unsplash.com/photo-1592659762303-90081d34b277?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+	}
+
+	.background-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.75));
+		z-index: -1;
+	}
+
+	.hero-content {
+		max-width: 900px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero-name {
+		font-size: 4rem;
+		font-weight: 700;
+		color: white;
+		margin-bottom: 1.5rem;
+		line-height: 1.2;
+		text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+	}
+
+	.hero-tagline {
+		font-size: 1.4rem;
+		color: rgba(255, 255, 255, 0.95);
+		font-weight: 500;
+		margin-bottom: 2rem;
+		text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+	}
+
+	.cursor {
+		animation: blink 1s infinite;
+		color: var(--accent-color);
+		font-weight: 400;
+	}
+
+	@keyframes blink {
+		0%, 50% { opacity: 1; }
+		51%, 100% { opacity: 0; }
+	}
+
+	.content-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.intro {
+		padding: 4rem 0;
+		background-color: var(--bg-secondary);
+		border-radius: 16px;
+		margin: 3rem 0;
+	}
+
+	.intro-content {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.intro-image {
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.intro-image img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.intro-image:hover img {
+		transform: scale(1.05);
+	}
+
+	.intro-text {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		color: var(--text-primary);
+		margin-bottom: 2rem;
+	}
+
+	.read-more-btn {
+		display: inline-block;
+		background-color: var(--accent-color);
+		color: white;
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 500;
+		transition: all 0.2s ease;
+		box-shadow: var(--shadow);
+	}
+
+	.read-more-btn:hover {
+		background-color: #2563eb;
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.quotes {
+		padding: 5rem 0;
+		text-align: center;
+	}
+
+	.quote-container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 3rem;
+		background-color: var(--bg-secondary);
+		border-radius: 16px;
+		border: 1px solid var(--border-color);
+	}
+
+	.quote {
+		font-size: 2rem;
+		font-style: italic;
+		color: var(--text-primary);
+		margin-bottom: 2rem;
+		line-height: 1.6;
+		min-height: 6rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+	}
+
+	.quote-author {
+		font-size: 1.3rem;
+		color: var(--text-secondary);
+		font-weight: 500;
+		min-height: 2.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@media (max-width: 1024px) {
+		.hero {
+			padding: 4rem 1rem;
+			min-height: 60vh;
+		}
+
+		.hero-name {
+			font-size: 3rem;
+		}
+
+		.hero-tagline {
+			font-size: 1.2rem;
+		}
+
+		.content-container {
+			padding: 0 1rem;
+		}
+
+		.intro-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+			padding: 0 1rem;
+		}
+
+		.quote {
+			font-size: 1.6rem;
+			min-height: 5rem;
+		}
+
+		.quote-author {
+			font-size: 1.1rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			padding: 3rem 1rem;
+			min-height: 50vh;
+		}
+
+		.hero-name {
+			font-size: 2.2rem;
+		}
+
+		.hero-tagline {
+			font-size: 1rem;
+		}
+
+		.intro {
+			margin: 2rem 0;
+		}
+
+		.intro-text {
+			font-size: 1rem;
+		}
+
+		.quote-container {
+			padding: 2rem;
+		}
+
+		.quote {
+			font-size: 1.3rem;
+			min-height: 4rem;
+		}
+
+		.quote-author {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero-name {
+			font-size: 1.8rem;
+		}
+
+		.hero-tagline {
+			font-size: 0.9rem;
+		}
+
+		.quote {
+			font-size: 1.1rem;
+		}
+	}
+</style>
+
+<script>
+	// Background slideshow
+	let currentBg = 0;
+	const backgrounds = ['bg1', 'bg2', 'bg3'];
+	
+	function showNextBackground() {
+		// Hide current background
+		document.getElementById(backgrounds[currentBg]).style.opacity = '0';
+		
+		// Move to next background
+		currentBg = (currentBg + 1) % backgrounds.length;
+		
+		// Show next background
+		document.getElementById(backgrounds[currentBg]).style.opacity = '1';
+	}
+	
+	// Start slideshow
+	document.addEventListener('DOMContentLoaded', () => {
+		// Show first background
+		document.getElementById(backgrounds[0]).style.opacity = '1';
+		
+		// Change background every 5 seconds
+		setInterval(showNextBackground, 5000);
+	});
+
+	// Typing animation for name
+	const nameText = "Sami Elsayed";
+	const nameElement = document.getElementById('typed-name');
+	const nameCursor = document.getElementById('name-cursor');
+	
+	let nameIndex = 0;
+	
+	function typeName() {
+		if (nameIndex < nameText.length) {
+			nameElement.textContent += nameText.charAt(nameIndex);
+			nameIndex++;
+			setTimeout(typeName, 100);
+		} else {
+			nameCursor.style.animation = 'blink 1s infinite';
+		}
+	}
+	
+	// Quotes data
+	const quotes = [
+		{ text: "The best way to predict the future is to create it.", author: "Peter Drucker" },
+		{ text: "In the middle of difficulty lies opportunity.", author: "Albert Einstein" },
+		{ text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+		{ text: "Security is not a product, but a process.", author: "Bruce Schneier" },
+		{ text: "The future depends on what we do in the present.", author: "Mahatma Gandhi" },
+		{ text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
+		{ text: "The greatest glory in living lies not in never falling, but in rising every time we fall.", author: "Nelson Mandela" }
+	];
+	
+	let currentQuoteIndex = 0;
+	let isTyping = false;
+	
+	const quoteElement = document.getElementById('typed-quote');
+	const authorElement = document.getElementById('typed-author');
+	const quoteCursor = document.getElementById('quote-cursor');
+	const authorCursor = document.getElementById('author-cursor');
+	
+	function typeText(element, text, callback) {
+		let index = 0;
+		element.textContent = '';
+		
+		function type() {
+			if (index < text.length) {
+				element.textContent += text.charAt(index);
+				index++;
+				setTimeout(type, 50);
+			} else {
+				callback();
+			}
+		}
+		
+		type();
+	}
+	
+	function showQuote() {
+		if (isTyping) return;
+		
+		isTyping = true;
+		const currentQuote = quotes[currentQuoteIndex];
+		
+		// Hide cursors during typing
+		quoteCursor.style.display = 'none';
+		authorCursor.style.display = 'none';
+		
+		// Type quote
+		typeText(quoteElement, currentQuote.text, () => {
+			// Show blinking cursor after quote
+			quoteCursor.style.display = 'inline';
+			quoteCursor.style.animation = 'blink 1s infinite';
+			
+			// Type author after a short delay
+			setTimeout(() => {
+				quoteCursor.style.display = 'none';
+				typeText(authorElement, currentQuote.author, () => {
+					// Show blinking cursor after author
+					authorCursor.style.display = 'inline';
+					authorCursor.style.animation = 'blink 1s infinite';
+					
+					// Wait 3 seconds before next quote
+					setTimeout(() => {
+						authorCursor.style.display = 'none';
+						currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+						isTyping = false;
+						showQuote();
+					}, 3000);
+				});
+			}, 500);
+		});
+	}
+	
+	// Start animations when page loads
+	document.addEventListener('DOMContentLoaded', () => {
+		typeName();
+		setTimeout(showQuote, 2000);
+	});
+</script>

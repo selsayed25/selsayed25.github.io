@@ -1,0 +1,380 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Projects - Sami Elsayed">
+	<div class="projects-hero">
+		<div class="hero-content">
+			<h1 class="page-title">Projects</h1>
+			<p class="page-subtitle">My work at the intersection of technology, policy, and public service</p>
+		</div>
+		<div class="hero-image">
+			<img src="/public/img/working-in-server-room.jpg" alt="Technology projects workspace" />
+		</div>
+	</div>
+
+	<section class="projects-content">
+		<div class="projects-grid">
+			<div class="project-card featured">
+				<div class="project-image">
+					<img src="/public/img/the-techbook.png" alt="The Techbook cover" />
+				</div>
+				<div class="project-content">
+					<h3 class="project-title">The Techbook</h3>
+					<p class="project-description">
+						An open-access programming and computing textbook designed for students new to CS, covering Python, Java, Linux, Git, and more. Written to make complex technical concepts accessible to everyone.
+					</p>
+					<div class="project-links">
+						<a href="https://selsayed25.github.io/techbook/" class="project-link primary">Read it here</a>
+						<a href="https://github.com/selsayed25/techbook" class="project-link secondary">GitHub</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card featured">
+				<div class="project-image">
+					<img src="/public/img/ai-paradoxes.png" alt="AI book cover" />
+				</div>
+				<div class="project-content">
+					<h3 class="project-title">Unraveling AI Paradoxes</h3>
+					<p class="project-description">
+						A book about contradictions in modern artificial intelligence—ethics, safety, regulation, and machine deception. Explores the risks we're not ready for and the decisions we need to make now.
+					</p>
+					<div class="project-links">
+						<a href="https://ai-paradoxes.onrender.com/" class="project-link primary">Preview</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card">
+				<div class="project-image">
+					<img src="/public/img/heliothon-logo-color.png" alt="Network infrastructure" />
+				</div>
+				<div class="project-content">
+					<h3 class="project-title">Heliothon</h3>
+					<p class="project-description">
+						Started as a senior research project, Heliothon is currently a work-in-progress startup focused on revolutionizing AI hardware. Our goal is to create a new AI chip that is more versatile, efficient, and cheaper than existing solutions, enabling broader access to AI technology.
+					</p>
+					<div class="project-links">
+						<a href="https://heliothon.github.io" class="project-link primary">Website</a>
+						<a href="https://github.com/heliothon" class="project-link secondary">GitHub</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card">
+				<div class="project-image">
+					<img src="/public/img/tjcsl-server-room.jpg" alt="Server infrastructure" />
+				</div>
+				<div class="project-content">
+					<h3 class="project-title">TJHSST Infrastructure Modernization</h3>
+					<p class="project-description">
+						Led critical reimaging and modernization efforts as student system administrator, rebuilding infrastructure disrupted by COVID-19 shutdowns. Restored services for 1,800+ students.
+					</p>
+					<div class="project-links">
+						<span class="project-status">Internal Project</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="upcoming-projects">
+		<h2 class="section-title">Coming Soon</h2>
+		<div class="upcoming-grid">
+			<div class="upcoming-item">
+				<div class="upcoming-icon">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</div>
+				<h4>CTF Writeups</h4>
+				<p>Documentation of cybersecurity challenges and solutions from competitive events</p>
+			</div>
+			<div class="upcoming-item">
+				<div class="upcoming-icon">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</div>
+				<h4>Code Snippets</h4>
+				<p>Useful scripts and tools for system administration and cybersecurity work</p>
+			</div>
+			<div class="upcoming-item">
+				<div class="upcoming-icon">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</div>
+				<h4>Research Papers</h4>
+				<p>Academic work on cybersecurity, engineering, CS, and policy intersections from research.</p>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.projects-hero {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		padding: 3rem 0;
+		border-bottom: 1px solid var(--border-color);
+		margin-bottom: 3rem;
+		align-items: center;
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.page-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.25rem;
+		color: var(--text-secondary);
+		font-weight: 500;
+		line-height: 1.6;
+	}
+
+	.hero-image {
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.hero-image:hover img {
+		transform: scale(1.05);
+	}
+
+	.projects-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1rem;
+	}
+
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.project-card {
+		background-color: var(--bg-secondary);
+		border-radius: 16px;
+		border: 1px solid var(--border-color);
+		overflow: hidden;
+		transition: all 0.3s ease;
+		position: relative;
+	}
+
+	.project-card.featured {
+		grid-column: span 1;
+	}
+
+	.project-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(90deg, var(--accent-color), #2563eb);
+		transform: translateY(-100%);
+		transition: transform 0.3s ease;
+	}
+
+	.project-card:hover::before {
+		transform: translateY(0);
+	}
+
+	.project-card:hover {
+		transform: translateY(-8px);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--accent-color);
+	}
+
+	.project-image {
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.project-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.project-card:hover .project-image img {
+		transform: scale(1.05);
+	}
+
+	.project-content {
+		padding: 1.5rem;
+	}
+
+	.project-title {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.project-description {
+		color: var(--text-secondary);
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+		font-size: 0.95rem;
+	}
+
+	.project-links {
+		display: flex;
+		gap: 0.75rem;
+		flex-wrap: wrap;
+	}
+
+	.project-link {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 0.9rem;
+		transition: all 0.2s ease;
+	}
+
+	.project-link.primary {
+		background-color: var(--accent-color);
+		color: white;
+	}
+
+	.project-link.primary:hover {
+		background-color: #2563eb;
+		transform: translateY(-2px);
+	}
+
+	.project-link.secondary {
+		background-color: transparent;
+		color: var(--accent-color);
+		border: 1px solid var(--accent-color);
+	}
+
+	.project-link.secondary:hover {
+		background-color: var(--accent-color);
+		color: white;
+	}
+
+	.project-status {
+		background-color: var(--text-light);
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+		font-weight: 500;
+		font-size: 0.9rem;
+	}
+
+	.upcoming-projects {
+		padding-top: 3rem;
+		border-top: 1px solid var(--border-color);
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.section-title {
+		font-size: 1.75rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.upcoming-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.upcoming-item {
+		background-color: var(--bg-primary);
+		padding: 1.5rem;
+		border-radius: 12px;
+		border: 2px dashed var(--border-color);
+		text-align: center;
+		transition: all 0.2s ease;
+	}
+
+	.upcoming-item:hover {
+		border-color: var(--accent-color);
+		transform: translateY(-2px);
+	}
+
+	.upcoming-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		background-color: var(--accent-color);
+		border-radius: 50%;
+		margin-bottom: 1rem;
+		color: white;
+	}
+
+	.upcoming-item h4 {
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		margin-bottom: 0.5rem;
+	}
+
+	.upcoming-item p {
+		color: var(--text-secondary);
+		font-size: 0.9rem;
+		line-height: 1.5;
+	}
+
+	@media (max-width: 768px) {
+		.projects-hero {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.page-title {
+			font-size: 2rem;
+		}
+
+		.page-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.projects-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.project-content {
+			padding: 1.25rem;
+		}
+
+		.upcoming-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
