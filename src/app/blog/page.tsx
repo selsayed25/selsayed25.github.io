@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getAllPosts, getAllTags } from "@/lib/posts";
 import { TagBadge } from "@/components/TagBadge";
 
+export const dynamic = 'force-static';
+
 export default async function BlogPage({
   searchParams,
 }: {
