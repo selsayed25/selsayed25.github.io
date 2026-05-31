@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 6% 10%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --border: 240 6% 90%;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 95%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 60%;
+    --border: 240 4% 16%;
+  }
+
+  body {
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: hsl(271 76% 53% / 0.2);
+}
+
+/* KaTeX scrollable math */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+/* ─── Code blocks ─── */
+
+/* Server-rendered bare pre with language class */
+.prose pre[class*="language-"] {
+  overflow-x: auto;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  border: 1px solid;
+}
+:root .prose pre[class*="language-"] {
+  background: hsl(240 5% 96%) !important;
+  border-color: hsl(240 6% 90%);
+}
+.dark .prose pre[class*="language-"] {
+  background: hsl(240 10% 4%) !important;
+  border-color: hsl(240 4% 16%);
+}
+
+/* Client-enhanced code blocks (with wrapper) */
+.code-block-wrapper {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+:root .code-block-wrapper {
+  border: 1px solid hsl(240 6% 90%);
+  background: hsl(240 5% 96%);
+}
+.dark .code-block-wrapper {
+  border: 1px solid hsl(240 4% 16%);
+  background: hsl(240 10% 4%);
+}
+
+.code-block-wrapper pre {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 1rem !important;
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.375rem 1rem;
+  font-size: 0.75rem;
+  border-bottom: 1px solid;
+}
+:root .code-block-header {
+  background: hsl(240 5% 93%);
+  border-color: hsl(240 6% 90%);
+}
+.dark .code-block-header {
+  background: hsl(240 10% 4%);
+  border-color: hsl(240 4% 16%);
+  border-bottom-color: hsl(240 4% 16%);
+}
+
+.code-block-lang {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+:root .code-block-lang { color: hsl(240 4% 46%); }
+.dark .code-block-lang { color: hsl(240 5% 50%); }
+
+.code-block-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all 0.15s;
+  opacity: 0;
+}
+.group:hover .code-block-copy-btn {
+  opacity: 1;
+}
+:root .code-block-copy-btn { color: hsl(240 4% 46%); }
+:root .code-block-copy-btn:hover { background: hsl(240 5% 88%); color: hsl(240 6% 10%); }
+.dark .code-block-copy-btn { color: hsl(240 5% 50%); }
+.dark .code-block-copy-btn:hover { background: hsl(240 4% 16%); color: hsl(0 0% 93%); }
+
+/* ─── Images ─── */
+
+.mdx-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 2rem auto;
+  border: 1px solid;
+}
+:root .mdx-image {
+  border-color: hsl(240 6% 90%);
+}
+.dark .mdx-image {
+  border-color: hsl(240 4% 16%);
+}
+
+.mdx-figure {
+  margin: 2rem 0;
+}
+
+.mdx-figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+}
+:root .mdx-figcaption { color: hsl(240 4% 46%); }
+.dark .mdx-figcaption { color: hsl(240 5% 50%); }
+
+/* Next.js Image compat – inline images via next/image get this class */
+.prose :where(img):not(:where([class~="not-prose"] *)) {
+  border-radius: 0.75rem;
+}
+
+/* ─── Syntax highlighting (light + dark) ─── */
+
+:root {
+  --token-comment: #787c99;
+  --token-punctuation: #9ca3af;
+  --token-property: #d946ef;
+  --token-selector: #059669;
+  --token-operator: #0891b2;
+  --token-keyword: #7c3aed;
+  --token-function: #d97706;
+  --token-variable: #ea580c;
+}
+
+.dark {
+  --token-comment: #6b7280;
+  --token-punctuation: #9ca3af;
+  --token-property: #f472b6;
+  --token-selector: #34d399;
+  --token-operator: #67e8f9;
+  --token-keyword: #a78bfa;
+  --token-function: #fbbf24;
+  --token-variable: #f97316;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata { color: var(--token-comment); }
+
+.token.punctuation { color: var(--token-punctuation); }
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted { color: var(--token-property); }
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted { color: var(--token-selector); }
+
+.token.operator,
+.token.entity,
+.token.url { color: var(--token-operator); }
+
+.token.atrule,
+.token.attr-value,
+.token.keyword { color: var(--token-keyword); }
+
+.token.function,
+.token.class-name { color: var(--token-function); }
+
+.token.regex,
+.token.important,
+.token.variable { color: var(--token-variable); }
+
+/* ─── Prose overrides ─── */
+
+.prose {
+  --tw-prose-body: hsl(var(--foreground));
+  --tw-prose-headings: hsl(var(--foreground));
+  --tw-prose-links: hsl(271 76% 53%);
+  --tw-prose-bold: hsl(var(--foreground));
+  --tw-prose-counters: hsl(var(--muted-foreground));
+  --tw-prose-bullets: hsl(var(--muted-foreground));
+  --tw-prose-quotes: hsl(var(--foreground));
+  --tw-prose-code: hsl(var(--foreground));
+  --tw-prose-hr: hsl(var(--border));
+  --tw-prose-th-borders: hsl(var(--border));
+  --tw-prose-td-borders: hsl(var(--border));
+}
+
+/* Remove prose's default pre/code styling - we handle it ourselves */
+.prose :where(pre):not(:where([class~="not-prose"] *)) {
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  font-size: 0.875em;
+  font-weight: 450;
+}
+.prose :where(img):not(:where([class~="not-prose"] *)) {
+  border-radius: 0.75rem;
+}
+
+/* Inline code */
+:root .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)):not(pre code) {
+  background: hsl(240 5% 93%);
+  color: hsl(240 6% 10%);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+}
+.dark .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)):not(pre code) {
+  background: hsl(240 4% 16%);
+  color: hsl(0 0% 93%);
+}
+
+/* Table styling in prose */
+.prose :where(table):not(:where([class~="not-prose"] *)) {
+  font-size: 0.875rem;
+}
+
+/* Horizontal rule */
+.prose :where(hr):not(:where([class~="not-prose"] *)) {
+  border-color: hsl(var(--border));
+}

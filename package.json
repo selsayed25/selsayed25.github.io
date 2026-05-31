@@ -1,16 +1,40 @@
 {
-  "name": "@selsayed/website",
-  "type": "module",
-  "version": "1.0.0",
+  "name": "personal-website",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "astro": "^5.2.5",
-    "pdfjs": "^2.5.4"
+    "@types/hast": "^3.0.4",
+    "framer-motion": "^11.0.0",
+    "gray-matter": "^4.0.3",
+    "katex": "^0.16.9",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rehype-katex": "^7.0.1",
+    "rehype-prism-plus": "^2.0.2",
+    "rehype-remark": "^10.0.1",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.7.0"
   }
 }
