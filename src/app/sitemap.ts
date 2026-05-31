@@ -1,5 +1,7 @@
 import { getAllPosts } from "@/lib/posts";
 
+export const dynamic = 'force-static';
+
 export default async function sitemap() {
   const posts = getAllPosts();
   const blogEntries = posts.map((post) => ({
